@@ -261,7 +261,6 @@ class Home extends State<Homescreen> {
               ),
             ),
 
-
 //      ---------------------------------  Best Seller Section  ------------------------------------------
 
             Container(
@@ -277,101 +276,415 @@ class Home extends State<Homescreen> {
 
             Container(
               padding: EdgeInsets.all(8),
-              
               height: 350,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.blue,
-                
               ),
-            
-
-            
               child: GridView.count(
                 crossAxisCount: 2,
-                childAspectRatio: 0.8,
-              children: [
+                childAspectRatio: 0.7,
+                children: [
+                  // ------------------------ First Card Container ------------
 
-                // ------------------------ First Card Container ------------
+                  Container(
+                    margin: EdgeInsets.only(left: 5, right: 5, top: 5, bottom: 5),
+                    padding: EdgeInsets.all(8),
 
-                Container(
-                  margin: EdgeInsets.only(left: 5, right: 5),
-                  padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(8)
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.only(top: 2, bottom: 2, left: 7, right: 7),
-                            decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(8),
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 221, 215, 215),
+                        borderRadius: BorderRadius.circular(8)),
+                        
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(
+                                  top: 2, bottom: 2, left: 7, right: 7),
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+
+                              child: Text(
+                                "50%",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
-                            child: Text("50%", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-                          ),
-                          Icon(Icons.favorite_border),
-                        ],
-                      ),
+                            Icon(Icons.favorite_border),
+                          ],
+                        ),
                         Container(
+                          margin: EdgeInsets.only(top: 10),
                           width: double.infinity,
-                          height: 100,
-
+                          height: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.yellow
+                            // color: Colors.yellow
                           ),
-                          child: Image.asset("../assets/images/shoes.png"),
+                          child: Image.asset(
+                            "../assets/images/shoe.png",
+                          ),
                         ),
-                    ],
-                  ),
-                ),
-
-                // ------------------------ Second Container ------------
-                Container(
-                  margin: EdgeInsets.only(left: 5, right: 5),
-                  padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(8)
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.only(top: 2, bottom: 2, left: 7, right: 7),
-                            decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Text("50%", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-                          ),
-                          Icon(Icons.favorite_border),
-                        ],
-                      ),
                         Container(
-                          width: double.infinity,
-                          height: 100,
+                          child: Text(
+                            "Shoes",
+                            style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.deepPurple,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "These shoes are manufactured by top companies and currently they are being used by top football players",
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.deepPurple,
+                            ),
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(top: 3, bottom: 3, left: 7, right: 7),
+                                decoration: BoxDecoration(
+                                  color: Colors.deepPurpleAccent,
+                                  borderRadius: BorderRadius.circular(8)
+                                ),
+                                child: Text("\$75", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                              ),
+                              Container(
+                                child: Icon(Icons.shopping_cart),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
 
+                  // ------------------------ Second Container ------------
+                  Container(
+                    margin: EdgeInsets.only(left: 5, right: 5, top: 5, bottom: 5),
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 221, 215, 215),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(
+                                  top: 2, bottom: 2, left: 7, right: 7),
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Text(
+                                "50%",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Icon(Icons.favorite_border),
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 10),
+                          width: double.infinity,
+                          height: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.yellow
+                            // color: Colors.yellow
                           ),
-                          child: Image.asset("../assets/images/shoes.png"),
+                          child: Image.asset(
+                            "../assets/images/shoe.png",
+                          ),
                         ),
-                    ],
+                        Container(
+                          child: Text(
+                            "Shoes",
+                            style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.deepPurple,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "These shoes are manufactured by top companies and currently they are being used by top football players",
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.deepPurple,
+                            ),
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(top: 3, bottom: 3, left: 7, right: 7),
+                                decoration: BoxDecoration(
+                                  color: Colors.deepPurpleAccent,
+                                  borderRadius: BorderRadius.circular(8)
+                                ),
+                                child: Text("\$75", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                              ),
+                              Container(
+                                child: Icon(Icons.shopping_cart),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-              ],
-                ),
+
+                  // ---------------------------- Third Container -----------------------
+
+                  Container(
+                    margin: EdgeInsets.only(left: 5, right: 5, top: 5, bottom: 5),
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 221, 215, 215),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(
+                                  top: 2, bottom: 2, left: 7, right: 7),
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Text(
+                                "50%",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Icon(Icons.favorite_border),
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 10),
+                          width: double.infinity,
+                          height: 120,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            // color: Colors.yellow
+                          ),
+                          child: Image.asset(
+                            "../assets/images/shoe.png",
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "Shoes",
+                            style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.deepPurple,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "These shoes are manufactured by top companies and currently they are being used by top football players",
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.deepPurple,
+                            ),
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(top: 3, bottom: 3, left: 7, right: 7),
+                                decoration: BoxDecoration(
+                                  color: Colors.deepPurpleAccent,
+                                  borderRadius: BorderRadius.circular(8)
+                                ),
+                                child: Text("\$75", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                              ),
+                              Container(
+                                child: Icon(Icons.shopping_cart),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+
+                  // ------------------------- Forth Container -----------------------------------------
+
+                  Container(
+                    margin: EdgeInsets.only(left: 5, right: 5, top: 5, bottom: 5),
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 221, 215, 215),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(
+                                  top: 2, bottom: 2, left: 7, right: 7),
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Text(
+                                "50%",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Icon(Icons.favorite_border),
+                          ],
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 10),
+                          width: double.infinity,
+                          height: 120,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            // color: Colors.yellow
+                          ),
+                          child: Image.asset(
+                            "../assets/images/shoe.png",
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "Shoes",
+                            style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.deepPurple,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "These shoes are manufactured by top companies and currently they are being used by top football players",
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.deepPurple,
+                            ),
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(top: 3, bottom: 3, left: 7, right: 7),
+                                decoration: BoxDecoration(
+                                  color: Colors.deepPurpleAccent,
+                                  borderRadius: BorderRadius.circular(8)
+                                ),
+                                child: Text("\$75", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                              ),
+                              Container(
+                                child: Icon(Icons.shopping_cart),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+
+                ],
+              ),
             ),
           ],
-        ));
+        ),
+        
+
+        // -------------------------------  Flotting Action Button And Bottom Navigation Bar -------------------------
+
+        floatingActionButton: FloatingActionButton(onPressed: (){
+        },
+        
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+
+        child: Icon(Icons.home,
+        color: Colors.red,),
+
+        
+        ),
+
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        
+        
+        // -----------------------  Bottom Navigation Bar  --------------------------
+        bottomNavigationBar: BottomAppBar(
+          height: 60,
+          color: Colors.black,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            
+             children: [
+              Builder(builder: (context) {
+                return IconButton(onPressed: () {
+
+                }, icon: Icon(Icons.favorite, color: Colors.white, size: 25,));
+              }),
+              Builder(builder: (context) {
+                return IconButton(onPressed: () {
+
+                }, icon: Icon(Icons.person,
+                color: Colors.white,));
+              }),
+
+              
+              Builder(builder: (context) {
+                return IconButton(onPressed: () {
+
+                }, icon: Icon(Icons.shopping_bag,
+                color: Colors.white,));
+              }),
+
+              
+              Builder(builder: (context) {
+                return IconButton(onPressed: () {
+
+                }, icon: Icon(Icons.ac_unit,
+                color: Colors.white,));
+              }),
+             ],
+          ),
+        ),
+        
+        );
   }
 }
